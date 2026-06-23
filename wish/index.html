@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>未来への謎</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card hero">
+      <p class="eyebrow">謎解き判定ページ</p>
+      <h1>未来への謎</h1>
+      <p>
+        依頼主「やまと」から届いた四枚の謎。<br>
+        すべての謎を解き、一つの答えを入力してください。
+      </p>
+    </section>
+
+    <section class="card" id="stage1">
+      <h2>答えを入力</h2>
+      <p class="note">ひらがな・カタカナ・英字・漢字の表記ゆれに少し対応しています。</p>
+      <div class="answer-row">
+        <input id="answer1" type="text" placeholder="答えを入力" autocomplete="off" />
+        <button id="check1">判定</button>
+      </div>
+      <p id="result1" class="result" aria-live="polite"></p>
+      <details class="hint">
+        <summary>ヒントを見る</summary>
+        <p>四枚の謎から導いた答えを、そのまま入力してください。</p>
+      </details>
+    </section>
+
+    <section class="card hidden" id="afterFirst">
+      <h2>やまとからの返事</h2>
+      <div class="message">
+        <p>ありがとうございます。</p>
+        <p>
+          教えていただいた答えで箱を開けようとしたのですが、開きませんでした。
+          どうやら南京錠は六文字のアルファベットで開くようです。
+        </p>
+        <p>「NOW」や「IMA」も試してみましたが、だめでした。</p>
+        <p>
+          念のため、父から届いた手紙の写真も送ります。<br>
+          何か手がかりになるでしょうか。
+        </p>
+      </div>
+
+      <figure class="image-box">
+        <img src="images/letter_2008.jpg" alt="2008年12月10日と書かれた手紙の写真" onerror="this.closest('figure').classList.add('image-missing')" />
+        <figcaption>※ここに手紙画像を配置できます：images/letter_2008.jpg</figcaption>
+      </figure>
+    </section>
+
+    <section class="card hidden" id="stage2">
+      <h2>六文字の答えを入力</h2>
+      <p class="note">半角英字で入力してください。</p>
+      <div class="answer-row">
+        <input id="answer2" type="text" placeholder="例：ABCDEF" autocomplete="off" />
+        <button id="check2">判定</button>
+      </div>
+      <p id="result2" class="result" aria-live="polite"></p>
+      <details class="hint">
+        <summary>ヒントを見る</summary>
+        <p>手紙が書かれた時代を基準に、もう一度考えてみてください。</p>
+      </details>
+    </section>
+
+    <section class="card hidden" id="ending">
+      <h2>箱の中の手紙</h2>
+      <div class="letter">
+        <p>やまとへ</p>
+
+        <p>突然こんな形で手紙を送ることになってしまって、本当にすまない。</p>
+
+        <p>
+          お前がまだ小さい頃、私はお前の前から姿を消した。
+          嫌いになったわけでも、捨てたかったわけでもない。
+        </p>
+
+        <p>
+          私は治る見込みのない病を抱えていた。
+          日に日に弱っていく自分を見せる勇気がなかった。
+        </p>
+
+        <p>父親として失格だったと思う。</p>
+
+        <p>それでも、お前のことを忘れた日は一日もなかった。</p>
+
+        <p>
+          今回の謎解きは、そんな私からお前への最後の挑戦状だ。
+          少し難しく作りすぎたかもしれないな。
+        </p>
+
+        <p>だが、お前ならきっと最後までたどり着いてくれると信じている。</p>
+
+        <p>
+          この謎の答えは「未来」だ。
+          今の私から見れば、お前が生きる時間はすべて未来になる。
+        </p>
+
+        <p>
+          私はその未来を見ることができない。
+          お前がどんな大人になるのか。
+          どんな人と出会い、どんな人生を歩むのか。
+          知ることはできない。
+        </p>
+
+        <p>だからせめて、この謎にその想いを込めた。</p>
+
+        <p>計画通りなら、この手紙がお前に届く頃には二十歳になっているはずだ。</p>
+
+        <p>誕生日おめでとう。</p>
+
+        <p>
+          箱の中の指輪は、私からお前への贈り物だ。
+          大切な人ができた時でも、何かの節目でも、好きなように使ってくれ。
+        </p>
+
+        <p>
+          そして時々でいい。
+          お前の父親は、お前の未来を信じていたことだけ思い出してくれたら嬉しい。
+        </p>
+
+        <p class="signature">父より</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
