@@ -75,7 +75,7 @@ if (readLetterButton) {
 
     if (orgelAudio) {
       try {
-        orgelAudio.volume = 0.05;
+        orgelAudio.volume = 0.01;
         await orgelAudio.play();
       } catch (error) {
       }
