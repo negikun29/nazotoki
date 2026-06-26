@@ -46,6 +46,45 @@
       </details>
     </section>
 
+    <section class="card hidden" id="afterFirst">
+      <h2>なつみからの返事</h2>
+      <div class="message">
+		<p>ありがとうございます！</p>
+
+		<p>「今」が答えだと分かった時は、これでようやく父の残した箱を開けられると思ったのですが……残念ながら、鍵は開きませんでした。</p>
+
+		<p>何度か試してみたのですが、やはり駄目でした。</p>
+
+		<p>「NOW」や「IMA」も入力してみたものの、反応はありません。</p>
+
+		<p>よく見ると、この南京錠は6文字のアルファベットを入力するタイプのようです。</p>
+
+		<p>もしかすると、まだ何か見落としているのかもしれません。</p>
+
+		<p>手がかりになるか分かりませんが、箱や手紙の写真も送ります。</p>
+
+		<p>もう少しだけ、一緒に考えていただけないでしょうか。</p>
+      </div>
+
+      <figure class="image-box">
+        <img src="images/box.png" onerror="this.closest('figure').classList.add('image-missing')" />
+      </figure>
+    </section>
+
+    <section class="card hidden" id="stage2">
+      <h2>六文字の答えを入力</h2>
+      <p class="note">半角英字で入力してください。</p>
+      <div class="answer-row">
+        <input id="answer2" type="text" placeholder="例：ABCDEF" autocomplete="off" />
+        <button id="check2">判定</button>
+      </div>
+      <p id="result2" class="result" aria-live="polite"></p>
+      <details class="hint">
+        <summary>ヒントを見る</summary>
+        <p>手紙が書かれた時代を基準に、もう一度考えてみてください。</p>
+      </details>
+    </section>
+
     <section class="card hidden" id="ending">
       <h2>箱が開いた</h2>
       <div class="message">
