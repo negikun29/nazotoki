@@ -24,7 +24,7 @@ function checkFirst() {
   const ans = normalize(raw);
 
   if (firstAnswers.has(ans) || raw.trim() === "今") {
-    setResult("result1", "正解です。やまとへ答えを伝えました。", true);
+    setResult("result1", "正解です。なつみへ答えを伝えました。", true);
     show("afterFirst");
     show("stage2");
     document.getElementById("afterFirst").scrollIntoView({ behavior: "smooth", block: "start" });
@@ -60,3 +60,27 @@ document.getElementById("answer1").addEventListener("keydown", e => {
 document.getElementById("answer2").addEventListener("keydown", e => {
   if (e.key === "Enter") checkSecond();
 });
+
+
+const readLetterButton = document.getElementById("readLetter");
+const letterContent = document.getElementById("letterContent");
+const endTitle = document.getElementById("endTitle");
+const orgelAudio = document.getElementById("orgelAudio");
+
+if (readLetterButton) {
+  readLetterButton.addEventListener("click", async () => {
+    letterContent.classList.remove("hidden");
+    endTitle.classList.remove("hidden");
+    readLetterButton.style.display = "none";
+
+    if (orgelAudio) {
+      try {
+        orgelAudio.volume = 0.05;
+        await orgelAudio.play();
+      } catch (error) {
+      }
+    }
+
+    letterContent.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}

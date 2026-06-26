@@ -12,13 +12,13 @@
       <p class="eyebrow">謎解き判定ページ</p>
       <h1>LAST WILL</h1>
       <p>
-        依頼主「やまと」から届いた四枚の謎。<br>
+        依頼主「なつみ」から届いた四つの謎。<br>
         すべての謎を解き、一つの答えを入力してください。
       </p>
     </section>
 
     <section class="card" id="stage1">
-      <h2>答えを入力</h2>
+      <h2>LASTから導かれた答えを入力</h2>
       <p class="note">ひらがな・カタカナ・英字・漢字の表記ゆれに少し対応しています。</p>
       <div class="answer-row">
         <input id="answer1" type="text" placeholder="答えを入力" autocomplete="off" />
@@ -32,11 +32,11 @@
         	<p>調整中</p>
       	</details>
       </details>
-　　　<details class="hint">
+	<details class="hint">
         <summary>ヒント:B</summary>
         <p>調整中</p>
       </details>
-　　　<details class="hint">
+	<details class="hint">
         <summary>ヒント:C</summary>
         <p>調整中</p>
       </details>
@@ -46,97 +46,61 @@
       </details>
     </section>
 
-    <section class="card hidden" id="afterFirst">
-      <h2>やまとからの返事</h2>
-      <div class="message">
-        <p>ありがとうございます。</p>
-        <p>
-          教えていただいた答えで箱を開けようとしたのですが、開きませんでした。
-          どうやら南京錠は六文字のアルファベットで開くようです。
-        </p>
-        <p>「NOW」や「IMA」も試してみましたが、だめでした。</p>
-        <p>
-          念のため、父から届いた手紙の写真も送ります。<br>
-          何か手がかりになるでしょうか。
-        </p>
-      </div>
-
-      <figure class="image-box">
-        <img src="images/box.png" onerror="this.closest('figure').classList.add('image-missing')" />
-      </figure>
-    </section>
-
-    <section class="card hidden" id="stage2">
-      <h2>六文字の答えを入力</h2>
-      <p class="note">半角英字で入力してください。</p>
-      <div class="answer-row">
-        <input id="answer2" type="text" placeholder="例：ABCDEF" autocomplete="off" />
-        <button id="check2">判定</button>
-      </div>
-      <p id="result2" class="result" aria-live="polite"></p>
-      <details class="hint">
-        <summary>ヒントを見る</summary>
-        <p>手紙が書かれた時代を基準に、もう一度考えてみてください。</p>
-      </details>
-    </section>
-
     <section class="card hidden" id="ending">
-      <h2>箱の中の手紙</h2>
-      <div class="letter">
-        <p>やまとへ</p>
+      <h2>箱が開いた</h2>
+      <div class="message">
+        <p>鍵が外れると、小さな音とともにオルゴールが鳴り始めた。</p>
 
-        <p>突然こんな形で手紙を送ることになってしまって、本当にすまない。</p>
+        <p>どうやら、この箱そのものがオルゴールになっていたらしい。</p>
 
-        <p>
-          お前がまだ小さい頃、私はお前の前から姿を消した。
-          嫌いになったわけでも、捨てたかったわけでもない。
-        </p>
+        <p>箱の中には、一通の手紙が入っている。</p>
+      </div>
 
-        <p>
-          私は治る見込みのない病を抱えていた。
-          日に日に弱っていく自分を見せる勇気がなかった。
-        </p>
+      <audio id="orgelAudio" src="audio/orgel.mp3" loop preload="auto"></audio>
 
-        <p>父親として失格だったと思う。</p>
+      <div class="answer-row">
+        <button id="readLetter" type="button">手紙を読む</button>
+      </div>
 
-        <p>それでも、お前のことを忘れた日は一日もなかった。</p>
+      <div class="letter hidden" id="letterContent">
+        <p>なつみへ</p>
 
-        <p>
-          今回の謎解きは、そんな私からお前への最後の挑戦状だ。
-          少し難しく作りすぎたかもしれないな。
-        </p>
+        <p>二十歳の誕生日、おめでとう。</p>
 
-        <p>だが、お前ならきっと最後までたどり着いてくれると信じている。</p>
+        <p>この手紙とオルゴールは、二十歳の誕生日に届くようにお願いしてある。</p>
 
-        <p>
-          この謎の答えは「未来」だ。
-          今の私から見れば、お前が生きる時間はすべて未来になる。
-        </p>
+        <p>私に残された時間は短くて、直接会えそうにはないから、今のうちに準備しておくことにした。</p>
 
-        <p>
-          私はその未来を見ることができない。
-          お前がどんな大人になるのか。
-          どんな人と出会い、どんな人生を歩むのか。
-          知ることはできない。
-        </p>
+        <p>私なりになつみと遊べるように考えたが、少し回りくどい形になってしまった。</p>
 
-        <p>だからせめて、この謎にその想いを込めた。</p>
+        <p>この謎をつくりながら、二十歳になったお前に贈る言葉を考えていたら、「未来」になった。</p>
 
-        <p>計画通りなら、この手紙がお前に届く頃には二十歳になっているはずだ。</p>
+        <p>好きなものは増えただろうか？</p>
 
-        <p>誕生日おめでとう。</p>
+        <p>健康でいるだろうか？</p>
 
-        <p>
-          箱の中の指輪は、私からお前への贈り物だ。
-          大切な人ができた時でも、何かの節目でも、好きなように使ってくれ。
-        </p>
+        <p>友達はできただろうか？恋人は？</p>
 
-        <p>
-          そして時々でいい。
-          お前の父親は、お前の未来を信じていたことだけ思い出してくれたら嬉しい。
-        </p>
+        <p>笑顔でいられているだろうか？</p>
+
+        <p>私のことを、少しは覚えていてくれているだろうか。</p>
+
+        <p>ふがいない父親で、すまない。</p>
+
+        <p>このオルゴールは、なつみが生まれた頃に買ったものだ。</p>
+
+        <p>ちゃんと音は鳴っただろうか。</p>
+
+        <p>そうであってほしい。</p>
+
+        <p>なつみの幸せな未来を願っている。</p>
 
         <p class="signature">父より</p>
+      </div>
+
+      <div class="hidden end-title" id="endTitle">
+        <p>END「LAST WILL」</p>
+        <p>THANK YOU FOR PLAYING</p>
       </div>
     </section>
   </main>
