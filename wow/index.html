@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>wow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card hero">
+      <p class="eyebrow">謎解き判定ページ</p>
+    </section>
+
+    <section class="card" id="smallStage">
+	  <h2>小なぞの答えを入力</h2>
+	  <p class="note">小なぞの答えを確認できます。</p>
+
+	  <div class="answer-box">
+	    <input id="miniAnswer" type="text" placeholder="小なぞの答え" />
+	    <button onclick="checkMiniAnswer()">判定</button>
+	  </div>
+
+	  <p id="miniResult" class="result"></p>
+	</section>
+
+    <section class="card" id="stage1">
+      <h2>最後のなぞを確認して答えを入力</h2>
+      <figure class="image-box">
+        <img src="images/last.png" alt="最後のなぞ" onerror="this.closest('figure').classList.add('image-missing')" />
+      </figure>
+      <div class="answer-row">
+        <input id="answer1" type="text" placeholder="答えを入力" autocomplete="off" />
+        <button id="check1" type="button">判定</button>
+      </div>
+      <p id="result1" class="result" aria-live="polite"></p>
+      <details class="hint">
+        <summary>ヒント</summary>
+        <p>なぞの枠に注目、順番にならべて今までの答えをかきだしてみよう</p>
+      </details>
+    </section>
+
+    <div class="hidden end-title" id="endTitle">
+      <p>CLEAR!!</p>
+      <p>THANK YOU FOR PLAYING!!!!</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
