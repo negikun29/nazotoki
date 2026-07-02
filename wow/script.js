@@ -24,7 +24,7 @@ function checkMiniAnswer() {
   const ans = normalize(document.getElementById("miniAnswer").value);
 
   if (miniAnswers.has(ans)) {
-    setResult("miniResult", "正解です。", true);
+    setResult("miniResult", `【${ans}】正解！`, true);
   } else {
     setResult("miniResult", "違います。", false);
   }
