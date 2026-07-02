@@ -31,11 +31,27 @@ function checkMiniAnswer() {
 }
 
 function checkAnswer() {
-  const ans = normalize(document.getElementById("answer1").value);
+  const input = document.getElementById("answer1");
+  const result = document.getElementById("result1");
 
-  if (finalAnswers.has(ans)) {
-    setResult("result1", "正解!!", true);
+  if (!input || !result) {
+    alert("answer1 または result1 が見つかりません");
+    return;
+  }
+
+  const ans = normalize(input.value);
+
+  if (ans === "くりあ" || ans === "クリア") {
+    result.innerHTML = `
+      <div class="clear-box">
+        <div class="clear-title">CLEAR</div>
+        <div class="clear-message">正解です。最後まで遊んでいただき、ありがとうございました。</div>
+        <div class="thanks">THANK YOU FOR PLAYING</div>
+      </div>
+    `;
+    result.className = "result ok";
   } else {
-    setResult("result1", "違います。", false);
+    result.textContent = "違います。";
+    result.className = "result ng";
   }
 }

@@ -204,3 +204,34 @@ button:hover { background: var(--accent-dark); }
 @media (max-width: 640px) {
   .small-grid { grid-template-columns: 1fr; }
 }
+
+.clear-box {
+  margin-top: 24px;
+  padding: 28px 20px;
+  border: 2px solid #8b6f47;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff8e8, #f1dfbd);
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(80, 55, 25, 0.18);
+}
+
+.clear-title {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #6b4b24;
+}
+
+.clear-message {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4a3828;
+}
+
+.thanks {
+  margin-top: 18px;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  color: #9a7a45;
+}

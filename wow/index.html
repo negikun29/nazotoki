@@ -29,11 +29,11 @@
       <figure class="image-box">
         <img src="images/last.png" alt="最後のなぞ" onerror="this.closest('figure').classList.add('image-missing')" />
       </figure>
-      <div class="answer-row">
-        <input id="answer1" type="text" placeholder="答えを入力" autocomplete="off" />
-        <button id="check1" type="button">判定</button>
+      <div class="answer-box">
+        <input id="answer1" type="text" placeholder="答えを入力" />
+        <button onclick="checkAnswer()">判定</button>
       </div>
-      <p id="result1" class="result" aria-live="polite"></p>
+      <div id="result1" class="result"></div>
       <details class="hint">
         <summary>ヒント</summary>
         <p>なぞの枠に注目、順番にならべて今までの答えをかきだしてみよう</p>
