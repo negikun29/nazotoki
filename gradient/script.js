@@ -55,3 +55,9 @@ function checkAnswer() {
     result.className = "result ng";
   }
 }
+
+function showNazo(num) {
+  const img = document.getElementById("nazoImage");
+  img.src = `images/nazo${num}.png`;
+  img.alt = `こなぞ${num}`;
+}

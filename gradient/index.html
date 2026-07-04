@@ -16,18 +16,23 @@
 	  >
 	</section>
     <section class="card" id="smallStage">
-      <figure class="image-box">
-        <img src="images/nazo1.png" alt="こなぞ1" onerror="this.closest('figure').classList.add('image-missing')" />
-      </figure>
-      <figure class="image-box">
-        <img src="images/nazo2.png" alt="こなぞ2" onerror="this.closest('figure').classList.add('image-missing')" />
-      </figure>
-      <figure class="image-box">
-        <img src="images/nazo3.png" alt="こなぞ3" onerror="this.closest('figure').classList.add('image-missing')" />
-      </figure>
-      <figure class="image-box">
-        <img src="images/nazo4.png" alt="こなぞ4" onerror="this.closest('figure').classList.add('image-missing')" />
-      </figure>
+      <div class="nazo-switcher">
+		  <div class="nazo-buttons">
+		    <button onclick="showNazo(1)">小なぞ1</button>
+		    <button onclick="showNazo(2)">小なぞ2</button>
+		    <button onclick="showNazo(3)">小なぞ3</button>
+		    <button onclick="showNazo(4)">小なぞ4</button>
+		  </div>
+
+		  <figure class="image-box">
+		    <img
+		      id="nazoImage"
+		      src="images/nazo1.png"
+		      alt="こなぞ1"
+		      onerror="this.closest('figure').classList.add('image-missing')"
+		    />
+		  </figure>
+		</div>
 	  <h2>小なぞの答えを入力</h2>
 	  <p class="note">小なぞの答えを確認できます。</p>
 

@@ -244,3 +244,23 @@ button:hover { background: var(--accent-dark); }
   margin: 0 auto;
   object-fit: contain;
 }
+.nazo-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.nazo-buttons button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #8b6f47;
+  background: #fff8e8;
+  color: #5a4022;
+  cursor: pointer;
+}
+
+.nazo-buttons button:hover {
+  background: #f1dfbd;
+}
