@@ -58,6 +58,12 @@ function checkAnswer() {
 
 function showNazo(num) {
   const img = document.getElementById("nazoImage");
+
+  if (!img) {
+    alert("nazoImage が見つかりません");
+    return;
+  }
+
   img.src = `images/nazo${num}.png`;
   img.alt = `こなぞ${num}`;
 }

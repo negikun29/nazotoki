@@ -245,21 +245,24 @@ button:hover { background: var(--accent-dark); }
 }
 .nazo-buttons {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .nazo-buttons button {
-  padding: 8px 14px;
+  padding: 9px 16px;
   border-radius: 999px;
-  border: 1px solid #8b6f47;
-  background: #fff8e8;
-  color: #5a4022;
+  border: 1px solid #7a5a35;
+  background: linear-gradient(135deg, #fff4d8, #e7c78f);
+  color: #4a321c;
+  font-weight: 700;
   cursor: pointer;
+  box-shadow: 0 3px 8px rgba(80, 55, 25, 0.12);
 }
 
 .nazo-buttons button:hover {
-  background: #f1dfbd;
+  background: linear-gradient(135deg, #ffe6a8, #dcae63);
+  transform: translateY(-1px);
 }
