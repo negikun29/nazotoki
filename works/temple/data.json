@@ -1,0 +1,105 @@
+{
+  "version": "1.0",
+  "id": "temple",
+  "title": "遺跡からの脱出",
+  "author": "ねぎ",
+  "difficulty": 3,
+  "time": "30〜45分",
+  "titleImage": "title.png",
+  "ogpImage": "ogp.png",
+  "supportButtonText": "気付く",
+  "supportThinkingImage": "thinking.png",
+  "intro": "ねぎなぞ脱出のテンプレート作品です。",
+  "howToPlay": "行き詰まったときは「気付く」ボタンを押してみましょう。\n\nまだ見つけていない新しい何かに、なぞねぎが気付くかもしれません。",
+  "notice": [
+    "配信OK",
+    "ソースコードを見ないと解けない謎は一切ありません。"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "label": "Q1",
+      "image": "q1.png",
+      "placeholder": "ひらがなで入力",
+      "answers": [
+        "ほこさき"
+      ],
+      "successMessage": "正解！",
+      "notices": [
+        {
+          "type": "text",
+          "content": "とりを大きな四角と見たとき左上・左下を読むとけんになる。"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "label": "Q2",
+      "image": "q2.png",
+      "placeholder": "むなしい状態をひらがなで入力",
+      "answers": [
+        "くうきょ"
+      ],
+      "successMessage": "正解！",
+      "notices": [
+        {
+          "type": "text",
+          "content": "かでんは「くうきせいじょうき」"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "label": "Q3",
+      "image": "q3.png",
+      "placeholder": "ひらがなで入力",
+      "answers": [
+        "しょくじ"
+      ],
+      "successMessage": "正解！",
+      "notices": [
+        {
+          "type": "text",
+          "content": "数え方"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "label": "Q4",
+      "image": "q4.png",
+      "placeholder": "ひらがなで入力",
+      "answers": [
+        "しんこう"
+      ],
+      "successMessage": "正解！",
+      "notices": [
+        {
+          "type": "text",
+          "content": "しりとり"
+        }
+      ]
+    },
+    {
+      "id": "last",
+      "label": "LAST",
+      "image": "last.png",
+      "placeholder": "送るものが答え、ひらがなで入力",
+      "answers": [
+        "さんじ"
+      ],
+      "successMessage": "最後の答えにたどり着いた。",
+      "notices": [
+        {
+          "type": "text",
+          "content": "これまでの答えを見直してみよう。"
+        }
+      ]
+    }
+  ],
+  "ending": {
+    "image": "clear.png",
+    "text": "すべての謎を解いた瞬間、なぜか施設は大爆発した。脱出成功！",
+    "tweetText": "ねぎなぞ『遺跡からの脱出』をクリア！\n無事爆破できた！\n#ねぎなぞ脱出 #謎解き #WEB謎"
+  }
+}
