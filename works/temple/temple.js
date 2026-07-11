@@ -15,9 +15,8 @@
 
   const area = document.getElementById("templeGridArea");
   const grid = document.getElementById("templeLetterGrid");
-  const resetButton = document.getElementById("templeGridReset");
 
-  if (!area || !grid || !resetButton) return;
+  if (!area || !grid) return;
 
   const cells = LETTERS.map((letter, index) => {
     const button = document.createElement("button");
@@ -43,11 +42,6 @@
 
     grid.appendChild(button);
     return button;
-  });
-
-  resetButton.addEventListener("click", () => {
-    filled.clear();
-    renderCells();
   });
 
   function getLastIndex() {
@@ -89,7 +83,6 @@
       cell.setAttribute("aria-pressed", active ? "true" : "false");
     });
 
-    resetButton.classList.toggle("is-visible", unlocked);
   }
 
   function updateVisibility() {
@@ -105,7 +98,7 @@
   if (stepNav) observer.observe(stepNav, { childList: true, subtree: true });
 
   document.addEventListener("click", event => {
-    if (event.target.closest("#prevButton, #nextButton, #stepNav, #answerButton, #progressResetButton")) {
+    if (event.target.closest("#prevButton, #nextButton, #stepNav, #answerButton")) {
       setTimeout(updateVisibility, 0);
     }
   });
